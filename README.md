@@ -23,8 +23,10 @@ Then, install the necessary requirements.
 npm install discordjs
 npm install dotenv
 ```
-Finally, create a .env file and add
+Now, create a .env file and add
 `TOKEN = 123` where you replace '123' with your Bot Token.
+
+Last but not least, in `./src/handlers/slashHandler` add your `clientID` and `guildID`.
 
 ## Start
 
