@@ -6,6 +6,7 @@ The ultimate and easy scalable DiscordJS v.13.8 starting point for your Bot
 
 - Slash Command Handler
 - Prefix Command Handler
+- Global Commands
 - Event Handler
 - Example For Every Feature
 
@@ -23,10 +24,10 @@ Then, install the necessary requirements.
 npm install discordjs
 npm install dotenv
 ```
-Now, create a .env file and add
+Now, create a .env file and add your token:
 `TOKEN = 123` where you replace '123' with your Bot Token.
 
-Last but not least, in `./src/handlers/slashHandler` add your `clientID` and `guildID`.
+Last but not least, in `./src/handlers/slashHandler` add your `clientID`
 
 ## Start
 
