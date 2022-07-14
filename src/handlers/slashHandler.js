@@ -33,15 +33,26 @@ module.exports = (client) => {
                 console.log('SLASH: Started refreshing application commands');
 
                 await rest.put(
-                    Routes.applicationGuildCommands(clientId, guildId),
+
+                    // These slash commands are global, meaning they can be executed in any server!
+                    // If you want to limit your slash commands to only be executed in one server, do the following:
+                    /*
+                        Routes.applicationGuildCommands(clientId, guildId),
+                        { 
+                            body: client.commandArray 
+                        },
+                    */
+
+                    Routes.applicationCommands(clientId),
                     {
                         body: client.commandArray
                     },
+
                 );
 
                 console.log('SLASH: Successfully refreshed application commands');
             } catch (error) {
-                console.error(error);
+                console.log("WARNING: Your set Client / Guild ID seems to be invalid.");
             }
         })();
 
