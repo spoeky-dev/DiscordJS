@@ -17,22 +17,25 @@ First, clone this repository.
 
 ```bash
 git clone https://github.com/spoeky-dev/DiscordJS.git
-cd DiscordJS
 ```
 Then, install the necessary requirements.
 ```bash
 npm install discordjs
 npm install dotenv
 ```
-Now, create a .env file and add your token:
-`TOKEN = 123` where you replace '123' with your Bot Token.
+Now, create a .env file and add your `TOKEN`
 
-Last but not least, in `./src/handlers/slashHandler` add your `clientID`
+Last but not least, in `./src/handlers/slashHandler` add your `clientID` and `guildID`
 
 ## Start
 
 To start your Bot, type
 
 ```bash
-  npm start
+npm start
+```
+
+Or, if you are using nodemon, type
+```bash
+npm run dev
 ```

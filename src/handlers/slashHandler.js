@@ -34,16 +34,25 @@ module.exports = (client) => {
 
                 await rest.put(
 
-                    // These slash commands are global, meaning they can be executed in any server!
-                    // If you want to limit your slash commands to only be executed in one server, do the following:
                     /*
-                        Routes.applicationGuildCommands(clientId, guildId),
-                        { 
-                            body: client.commandArray 
-                        },
-                    */
+
+                    Currently, your slash commands are only available on the server you entered as 'guildID'.
+                    If you want your bots slash commands to function on multiple servers, change the code 
+                    below this comment to the following bit:
 
                     Routes.applicationCommands(clientId),
+                    {
+                        body: client.commandArray
+                    },
+
+                    WARNING: If you do end up using the code bit above, refreshing your slash commands could
+                    take multiple hours to finish! However, once they are finished refreshing, your
+                    bots slash commands will work on any server its properly invited on.
+
+
+                    */
+
+                    Routes.applicationGuildCommands(clientId, guildId),
                     {
                         body: client.commandArray
                     },
