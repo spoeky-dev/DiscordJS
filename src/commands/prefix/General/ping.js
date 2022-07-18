@@ -2,6 +2,8 @@ module.exports = {
 
   // The name of your command
   name: 'ping',
+  // The aliases of your command
+  aliases: ['p'],
   // The description of your command
   description: 'The classic ping command',
 

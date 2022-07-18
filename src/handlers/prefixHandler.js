@@ -14,7 +14,7 @@ module.exports = (client) => {
                 console.log(`PREFIX: Found '${command.name}'`)
 
                 // Add the command to the command collection
-                client.commands.set(command.name, command);
+                client.prefixCommands.set(command.name, command);
                 client.commandArray.push(command.data);
             }
         }

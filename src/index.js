@@ -10,8 +10,11 @@ const client = new Client({
     ]
 });
 
-// Creating command collection
-client.commands = new Collection();
+// Creating slash command collection
+client.slashCommands = new Collection();
+
+// Creating prefix command collection
+client.prefixCommands = new Collection();
 
 const handlers = fs.readdirSync('./src/handlers').filter(file => file.endsWith('.js'));
 const eventFiles = fs.readdirSync('./src/events/').filter(file => file.endsWith('.js'));

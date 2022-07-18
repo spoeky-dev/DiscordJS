@@ -8,13 +8,12 @@ module.exports = {
 
         const args = message.content.slice(Prefix.length).trim().split(/ +/);
         const name = args.shift().toLowerCase();
-        const command = client.commands.get(name);
+        const command = client.prefixCommands.get(name) || client.prefixCommands.find(cmd => cmd.aliases && cmd.aliases.includes(name));
 
         if (!command) return;
 
         try {
-            await command.execute(message, args, name, client);
-            console.log(`DEBUG / PREFIX: Executed '${name}' - ${message.author.username}`);
+            await command.execute(message, args, message.author, client);
         } catch (error) {
             console.log(error);
         }

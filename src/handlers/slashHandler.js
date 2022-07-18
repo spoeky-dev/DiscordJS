@@ -19,7 +19,7 @@ module.exports = (client) => {
                 console.log(`SLASH: Found '${command.data.name}'`);
 
                 // Add the command to the command collection
-                client.commands.set(command.data.name, command);
+                client.slashCommands.set(command.data.name, command);
                 client.commandArray.push(command.data.toJSON());
             }
         }
