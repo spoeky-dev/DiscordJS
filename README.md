@@ -1,9 +1,10 @@
-# DiscordJS Starting Point
+# DiscordJS v.13 Starting Point
 
 The ultimate and easy scalable DiscordJS v.13.8 starting point for your Bot
 
 ## Features
 
+- Documentation
 - Slash Command Handler
 - Prefix Command Handler
 - Global Commands

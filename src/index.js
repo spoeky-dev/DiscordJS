@@ -16,6 +16,9 @@ client.slashCommands = new Collection();
 // Creating prefix command collection
 client.prefixCommands = new Collection();
 
+// Creating command array
+client.commandArray = [];
+
 const handlers = fs.readdirSync('./src/handlers').filter(file => file.endsWith('.js'));
 const eventFiles = fs.readdirSync('./src/events/').filter(file => file.endsWith('.js'));
 const slashFolders = fs.readdirSync('./src/commands/slash/');
