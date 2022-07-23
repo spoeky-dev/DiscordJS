@@ -2,6 +2,8 @@
 
 The ultimate and easy scalable DiscordJS v.13.8 starting point for your Bot
 
+Link to the v.14 starting point: https://github.com/spoeky-dev/DiscordJS-14
+
 ## Features
 
 - Documentation
@@ -21,8 +23,7 @@ git clone https://github.com/spoeky-dev/DiscordJS.git
 ```
 Then, install the necessary requirements.
 ```bash
-npm install discordjs
-npm install dotenv
+npm install 
 ```
 Now, create a .env file and add your `TOKEN`
 
